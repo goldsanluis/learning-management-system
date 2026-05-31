@@ -1,1 +1,573 @@
-{"courses": [], "students": [], "instructors": []}
+{
+    "next_course_id": 63,
+    "next_user_id": 2,
+    "instructors": [
+        {
+            "user_id": 1,
+            "name": "Admin Instructor",
+            "email": "admin@lms.com",
+            "password": "admin123"
+        }
+    ],
+    "students": [],
+    "courses": [
+        {
+            "course_id": 1,
+            "title": "BSCS - Bachelor of Science in Computer Science",
+            "description": "Core CS program covering algorithms, software engineering, and systems.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 2,
+            "title": "BSIT - Bachelor of Science in Information Technology",
+            "description": "IT program covering networking, web systems, and database management.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 3,
+            "title": "BSCE - Bachelor of Science in Civil Engineering",
+            "description": "Covers structural, geotechnical, and environmental engineering.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 4,
+            "title": "BSCpE - Bachelor of Science in Computer Engineering",
+            "description": "Combines hardware and software engineering principles.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 5,
+            "title": "BSEE - Bachelor of Science in Electrical Engineering",
+            "description": "Covers power systems, electronics, and electrical design.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 6,
+            "title": "BSECE - Bachelor of Science in Electronics Engineering",
+            "description": "Focuses on communication systems and electronic devices.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 7,
+            "title": "BSIE - Bachelor of Science in Industrial Engineering",
+            "description": "Covers production systems, operations research, and quality management.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 8,
+            "title": "BSME - Bachelor of Science in Mechanical Engineering",
+            "description": "Covers thermodynamics, machine design, and manufacturing.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 9,
+            "title": "BSRE - Bachelor of Science in Railway Engineering",
+            "description": "Specialized program on railway infrastructure and management.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 10,
+            "title": "BSA - Bachelor of Science in Accountancy",
+            "description": "Covers financial accounting, auditing, and taxation.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 11,
+            "title": "BSMA - Bachelor of Science in Management Accounting",
+            "description": "Focuses on managerial and cost accounting.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 12,
+            "title": "BSBAFM - BS Business Administration major in Financial Management",
+            "description": "Covers banking, investments, and financial planning.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 13,
+            "title": "BSBAHRM - BS Business Administration major in Human Resource Management",
+            "description": "Covers recruitment, labor relations, and organizational behavior.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 14,
+            "title": "BSBAMM - BS Business Administration major in Marketing Management",
+            "description": "Covers marketing strategy, consumer behavior, and branding.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 15,
+            "title": "BSENTREP - Bachelor of Science in Entrepreneurship",
+            "description": "Covers business planning, innovation, and startup management.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 16,
+            "title": "BSOA - Bachelor of Science in Office Administration",
+            "description": "Covers office systems, records management, and business communication.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 17,
+            "title": "ABELS - Bachelor of Arts in English Language Studies",
+            "description": "Covers linguistics, literature, and communication.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 18,
+            "title": "ABF - Bachelor of Arts in Filipinology",
+            "description": "Covers Filipino language, culture, and literature.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 19,
+            "title": "ABLCS - Bachelor of Arts in Literary and Cultural Studies",
+            "description": "Covers literary theory and cultural analysis.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 20,
+            "title": "AB-PHILO - Bachelor of Arts in Philosophy",
+            "description": "Covers logic, ethics, and philosophical traditions.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 21,
+            "title": "BPEA - Bachelor of Performing Arts major in Theater Arts",
+            "description": "Covers acting, directing, and stage production.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 22,
+            "title": "BADPR - Bachelor in Advertising and Public Relations",
+            "description": "Covers advertising strategy, PR campaigns, and media.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 23,
+            "title": "BA Broadcasting",
+            "description": "Covers radio, TV production, and broadcast journalism.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 24,
+            "title": "BACR - Bachelor of Arts in Communication Research",
+            "description": "Covers research methods in media and communication.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 25,
+            "title": "BAJ - Bachelor of Arts in Journalism",
+            "description": "Covers news writing, investigative reporting, and media ethics.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 26,
+            "title": "BSAPMATH - Bachelor of Science in Applied Mathematics",
+            "description": "Covers calculus, statistics, and mathematical modeling.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 27,
+            "title": "BSBIO - Bachelor of Science in Biology",
+            "description": "Covers cell biology, genetics, and ecology.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 28,
+            "title": "BSCHEM - Bachelor of Science in Chemistry",
+            "description": "Covers organic, inorganic, and analytical chemistry.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 29,
+            "title": "BSMATH - Bachelor of Science in Mathematics",
+            "description": "Covers pure mathematics including algebra and analysis.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 30,
+            "title": "BSND - Bachelor of Science in Nutrition and Dietetics",
+            "description": "Covers human nutrition, food science, and dietetic practice.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 31,
+            "title": "BSPHY - Bachelor of Science in Physics",
+            "description": "Covers classical mechanics, electromagnetism, and modern physics.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 32,
+            "title": "BSSTAT - Bachelor of Science in Statistics",
+            "description": "Covers statistical theory, data analysis, and probability.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 33,
+            "title": "BSFT - Bachelor of Science in Food Technology",
+            "description": "Covers food processing, safety, and quality control.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 34,
+            "title": "BEEd - Bachelor of Elementary Education",
+            "description": "Prepares teachers for elementary school instruction.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 35,
+            "title": "BECEd - Bachelor of Early Childhood Education",
+            "description": "Covers early childhood development and teaching methods.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 36,
+            "title": "BSEd-English - Bachelor of Secondary Education major in English",
+            "description": "Prepares English teachers for secondary school.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 37,
+            "title": "BSEd-Math - Bachelor of Secondary Education major in Mathematics",
+            "description": "Prepares math teachers for secondary school.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 38,
+            "title": "BSEd-Science - Bachelor of Secondary Education major in Science",
+            "description": "Prepares science teachers for secondary school.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 39,
+            "title": "BLIS - Bachelor of Library and Information Science",
+            "description": "Covers library management, cataloging, and information systems.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 40,
+            "title": "BS-ARCH - Bachelor of Science in Architecture",
+            "description": "Covers architectural design, building technology, and urban planning.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 41,
+            "title": "BSID - Bachelor of Science in Interior Design",
+            "description": "Covers space planning, design principles, and materials.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 42,
+            "title": "BSEP - Bachelor of Science in Environmental Planning",
+            "description": "Covers land use, urban development, and environmental policy.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 43,
+            "title": "ABS - Bachelor of Arts in Sociology",
+            "description": "Covers social theory, research methods, and social institutions.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 44,
+            "title": "BSE - Bachelor of Science in Economics",
+            "description": "Covers micro and macroeconomics, econometrics, and policy.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 45,
+            "title": "BAH - Bachelor of Arts in History",
+            "description": "Covers Philippine and world history and historiography.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 46,
+            "title": "BSPSY - Bachelor of Science in Psychology",
+            "description": "Covers human behavior, mental processes, and research methods.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 47,
+            "title": "BSSW - Bachelor of Science in Social Work",
+            "description": "Covers community development, welfare services, and counseling.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 48,
+            "title": "BAPS - Bachelor of Arts in Political Science",
+            "description": "Covers political theory, governance, and comparative politics.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 49,
+            "title": "BAPE - Bachelor of Arts in Political Economy",
+            "description": "Covers the relationship between politics and economic systems.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 50,
+            "title": "BAIS - Bachelor of Arts in International Studies",
+            "description": "Covers international relations, diplomacy, and global issues.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 51,
+            "title": "BPA - Bachelor of Public Administration",
+            "description": "Covers public policy, government administration, and ethics.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 52,
+            "title": "BSHM - Bachelor of Science in Hospitality Management",
+            "description": "Covers hotel operations, food service, and event management.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 53,
+            "title": "BSTM - Bachelor of Science in Tourism Management",
+            "description": "Covers travel operations, tour guiding, and tourism planning.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 54,
+            "title": "BSTRM - Bachelor of Science in Transportation Management",
+            "description": "Covers logistics, transport systems, and fleet management.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 55,
+            "title": "BPE - Bachelor of Physical Education",
+            "description": "Covers physical fitness, sports coaching, and kinesiology.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 56,
+            "title": "BSESS - Bachelor of Science in Exercise and Sports Sciences",
+            "description": "Covers sports science, performance training, and rehabilitation.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 57,
+            "title": "JD - Juris Doctor",
+            "description": "Professional law degree covering civil, criminal, and constitutional law.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 58,
+            "title": "MBA - Master in Business Administration",
+            "description": "Advanced business program covering strategy, finance, and leadership.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 59,
+            "title": "MSIT - Master of Science in Information Technology",
+            "description": "Graduate IT program with specializations in data analytics and security.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 60,
+            "title": "MSCS-equivalent - Master of Science in Computer Engineering",
+            "description": "Graduate program in applied security, data science, and engineering.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 61,
+            "title": "MPA - Master in Public Administration",
+            "description": "Graduate program in governance, policy analysis, and public management.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        },
+        {
+            "course_id": 62,
+            "title": "MAP - Master of Arts in Psychology",
+            "description": "Graduate psychology with clinical and industrial specializations.",
+            "instructor_id": 1,
+            "pdf_file": null,
+            "date_created": "2026-05-31 09:38:40",
+            "student_ids": []
+        }
+    ]
+}

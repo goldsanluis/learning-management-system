@@ -1,65 +1,77 @@
+# ============================================================
+# main_window.py - MainWindow class
+# Main application window shown after login.
+# ============================================================
+
 import tkinter as tk
 from gui.course_form import CourseForm
 from gui.enrollment_view import EnrollmentView
-from services.enrollment_service import EnrollmentService
-from services.pdf_service import PDFService
-from file_handler.file_manager import FileManager
+from gui.theme import *
 
 class MainWindow:
-    def __init__(self):
+    def __init__(self, current_user, role, service, pdf_service, file_manager):
+        self.current_user = current_user
+        self.role = role
+        self.service = service
+        self.pdf_service = pdf_service
+        self.file_manager = file_manager
+
         self.root = tk.Tk()
         self.root.title("Learning Management System")
-        self.root.geometry("900x650")
-        self.root.configure(bg="#1a1a2e")
-
-        self.service = EnrollmentService()
-        self.pdf_service = PDFService()
-        self.file_manager = FileManager()
-
-        # Add a default instructor
-        self.default_instructor = self.service.add_instructor(
-            "Admin Instructor", "admin@lms.com", "admin123"
-        )
+        self.root.geometry("1050x700")
+        self.root.configure(bg=BG_DARK)
 
         self.setup_header()
         self.setup_main()
 
     def setup_header(self):
-        header = tk.Frame(self.root, bg="#16213e", pady=10)
+        # Gold top banner
+        header = tk.Frame(self.root, bg=GOLD_MEDIUM, pady=12)
         header.pack(fill="x")
 
         tk.Label(
             header,
-            text="📚 Learning Management System",
-            font=("Helvetica", 20, "bold"),
-            bg="#16213e",
-            fg="#e94560"
-        ).pack()
+            text="📚  Learning Management System",
+            font=FONT_TITLE,
+            bg=GOLD_MEDIUM,
+            fg=TEXT_DARK
+        ).pack(side="left", padx=20)
+
+        # Role badge on the right
+        badge_color = GOLD_DARK if self.role == "Instructor" else BG_MEDIUM
+        tk.Label(
+            header,
+            text=f"  👤 {self.current_user.name}   |   {self.role}  ",
+            font=FONT_BODY,
+            bg=badge_color,
+            fg=GOLD_PALE,
+            relief="flat", padx=8, pady=4
+        ).pack(side="right", padx=20)
+
+        # Gold line under the header
+        tk.Frame(self.root, bg=GOLD_BRIGHT, height=2).pack(fill="x")
 
     def setup_main(self):
-        main_frame = tk.Frame(self.root, bg="#1a1a2e")
-        main_frame.pack(fill="both", expand=True, padx=20, pady=10)
+        main_frame = tk.Frame(self.root, bg=BG_DARK)
+        main_frame.pack(fill="both", expand=True, padx=15, pady=12)
 
-        self.course_form = CourseForm(
-            main_frame,
-            self.service,
-            self.pdf_service,
-            self.file_manager,
-            self.default_instructor,
-            self.refresh
-        )
-        self.course_form.frame.pack(side="left", fill="both", expand=True, padx=5)
+        if self.role == "Instructor":
+            self.course_form = CourseForm(
+                main_frame, self.service, self.pdf_service,
+                self.file_manager, self.current_user, self.refresh
+            )
+            self.course_form.frame.pack(side="left", fill="both", expand=True, padx=5)
 
         self.enrollment_view = EnrollmentView(
-            main_frame,
-            self.service,
-            self.pdf_service,
-            self.file_manager
+            main_frame, self.service, self.pdf_service,
+            self.file_manager, self.current_user, self.role
         )
         self.enrollment_view.frame.pack(side="right", fill="both", expand=True, padx=5)
 
     def refresh(self):
         self.enrollment_view.refresh()
+        if self.role == "Instructor":
+            self.course_form.refresh_my_courses()
 
     def run(self):
         self.root.mainloop()
