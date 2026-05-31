@@ -49,9 +49,33 @@ class MainWindow:
         ).pack(side="right", padx=20)
 
         # Gold line under the header
+        tk.Button(
+            header,
+            text="🚪 Logout",
+            font=FONT_BODY,
+            bg=GOLD_DARK,
+            fg=TEXT_WHITE,
+            relief="flat",
+            padx=8, pady=4,
+            cursor="hand2",
+            activebackground=DANGER,
+            activeforeground=TEXT_WHITE,
+            command=self.logout
+        ).pack(side="right", padx=10)
+
         tk.Frame(self.root, bg=GOLD_BRIGHT, height=2).pack(fill="x")
 
+
+    def logout(self):
+        from tkinter import messagebox
+        if messagebox.askyesno("Logout", "Are you sure you want to logout?"):
+            self.root.destroy()
+            from main import main
+            main()
+
     def setup_main(self):
+
+
         main_frame = tk.Frame(self.root, bg=BG_DARK)
         main_frame.pack(fill="both", expand=True, padx=15, pady=12)
 
