@@ -65,6 +65,20 @@ class MainWindow:
 
         tk.Frame(self.root, bg=GOLD_BRIGHT, height=2).pack(fill="x")
 
+        stats_bar = tk.Frame(self.root, bg=BG_MEDIUM, pady=5)
+        stats_bar.pack(fill="x")
+
+        total_courses = len(self.service.get_all_courses())
+        total_students = len(self.service.students)
+
+        tk.Label(
+            stats_bar,
+            text=f"📚 Total Courses: {total_courses}     👥 Total Students: {total_students}     👤 Logged in as: {self.current_user.name} ({self.role})",
+            font=FONT_SMALL,
+            bg=BG_MEDIUM,
+            fg=GOLD_PALE
+        ).pack(side="left", padx=20)
+
 
     def logout(self):
         from tkinter import messagebox
