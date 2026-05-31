@@ -1,6 +1,6 @@
 {
     "next_course_id": 63,
-    "next_user_id": 2,
+    "next_user_id": 3,
     "instructors": [
         {
             "user_id": 1,
@@ -9,7 +9,15 @@
             "password": "admin123"
         }
     ],
-    "students": [],
+    "students": [
+        {
+            "user_id": 2,
+            "name": "gold",
+            "email": "gold",
+            "password": "gold",
+            "enrolled_course_ids": []
+        }
+    ],
     "courses": [
         {
             "course_id": 1,

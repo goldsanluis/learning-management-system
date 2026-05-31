@@ -121,9 +121,16 @@ class EnrollmentView:
                   activebackground=BG_LIGHT, activeforeground=GOLD_PALE,
                   command=self.refresh).pack(pady=6)
 
+        tk.Button(self.frame, text="📋  View Course Details",
+              font=FONT_BUTTON, bg=BG_LIGHT, fg=GOLD_PALE,
+              relief="flat", padx=10, pady=7, cursor="hand2",
+              activebackground=GOLD_DARK, activeforeground=TEXT_WHITE,
+              command=self.view_course_details).pack(pady=4, fill="x")
+
         self.refresh()
 
     def filter_courses(self):
+
         query = self.search_var.get().strip().lower()
         self.listbox.delete(0, tk.END)
         self.course_index_map = {}
@@ -230,3 +237,58 @@ class EnrollmentView:
             return
         result = self.pdf_service.download_pdf(course, destination)
         messagebox.showinfo("Download", result)
+
+    def view_course_details(self):
+        course = self.get_selected_course()
+        if not course:
+            return
+
+        popup = tk.Toplevel(self.frame)
+        popup.title("Course Details")
+        popup.geometry("480x400")
+        popup.configure(bg=BG_DARK)
+        popup.resizable(False, False)
+        popup.grab_set()
+
+        # Header
+        tk.Frame(popup, bg=GOLD_MEDIUM, pady=10).pack(fill="x")
+        tk.Label(popup, text="📋  Course Details",
+                 font=FONT_HEADER, bg=GOLD_MEDIUM, fg=TEXT_DARK
+                 ).place(relx=0.5, rely=0, anchor="n", y=8)
+        tk.Frame(popup, bg=GOLD_MEDIUM, pady=10).pack(fill="x")
+        tk.Frame(popup, bg=GOLD_BRIGHT, height=2).pack(fill="x")
+
+        # Details
+        details_frame = tk.Frame(popup, bg=BG_DARK, padx=24, pady=16)
+        details_frame.pack(fill="both", expand=True)
+
+        pdf_status = "Available ✅" if course.pdf_file else "Not attached ❌"
+        enrolled = len(course.students)
+
+        details = [
+            ("Course ID",     str(course.course_id)),
+            ("Title",         course.title),
+            ("Description",   course.description),
+            ("Instructor",    course.instructor.name),
+            ("Students",      f"{enrolled} enrolled"),
+            ("PDF",           pdf_status),
+            ("Date Created",  course.date_created),
+        ]
+
+        for label, value in details:
+            row = tk.Frame(details_frame, bg=BG_DARK)
+            row.pack(fill="x", pady=4)
+            tk.Label(row, text=f"{label}:", font=FONT_BODY,
+                     bg=BG_DARK, fg=GOLD_PALE, width=14,
+                     anchor="w").pack(side="left")
+            tk.Label(row, text=value, font=FONT_BODY,
+                     bg=BG_DARK, fg=TEXT_WHITE,
+                     anchor="w", wraplength=280,
+                     justify="left").pack(side="left", fill="x", expand=True)
+
+        tk.Button(popup, text="Close",
+                  font=FONT_BUTTON, bg=GOLD_MEDIUM, fg=TEXT_DARK,
+                  relief="flat", padx=10, pady=6, cursor="hand2",
+                  activebackground=GOLD_BRIGHT,
+                  command=popup.destroy).pack(pady=12)
+
