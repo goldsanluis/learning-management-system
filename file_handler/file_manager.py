@@ -4,6 +4,18 @@
 # Ensures data persists between app sessions.
 # ============================================================
 
+"""LMS Source Signature
+
+__author__     = "Ghani Regina Gold San Luis"
+__group__      = "Group 6"
+__course__     = "CMPE 103 - Object Oriented Programming"
+__school__     = "Polytechnic University of the Philippines"
+__section__    = "BSCPE 2-0"
+__github__     = "https://github.com/goldsanluis/learning-management-system"
+"""
+
+
+
 import json
 import os
 
@@ -35,6 +47,16 @@ class FileManager:
             "students": [],
             "courses": []
         }
+
+        data["_meta"] = {
+            "author": "Ghani Regina Gold San Luis",
+            "group": "Group 6",
+            "course": "CMPE 103 - Object Oriented Programming",
+            "school": "Polytechnic University of the Philippines",
+            "github": "https://github.com/goldsanluis/learning-management-system",
+        }
+
+
 
         # Save instructors
         for instructor in service.instructors:

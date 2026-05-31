@@ -3,6 +3,19 @@
 # Panel for instructors to add, edit, and delete courses.
 # ============================================================
 
+"""LMS Source Signature
+
+__author__     = "Ghani Regina Gold San Luis"
+__group__      = "Group 6"
+__course__     = "CMPE 103 - Object Oriented Programming"
+__school__     = "Polytechnic University of the Philippines"
+__section__    = "BSCPE 2-0"
+__github__     = "https://github.com/goldsanluis/learning-management-system"
+"""
+
+
+
+
 import tkinter as tk
 from tkinter import messagebox, filedialog
 from gui.theme import *

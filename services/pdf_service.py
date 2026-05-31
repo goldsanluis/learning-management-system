@@ -4,7 +4,18 @@
 # Stores PDFs in the data/pdfs folder.
 # ============================================================
 
+"""LMS Source Signature
+
+__author__     = "Ghani Regina Gold San Luis"
+__group__      = "Group 6"
+__course__     = "CMPE 103 - Object Oriented Programming"
+__school__     = "Polytechnic University of the Philippines"
+__section__    = "BSCPE 2-0"
+__github__     = "https://github.com/goldsanluis/learning-management-system"
+"""
+
 import os
+
 import shutil
 import subprocess
 import sys

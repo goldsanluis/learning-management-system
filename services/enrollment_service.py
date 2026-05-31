@@ -4,6 +4,20 @@
 # and instructors. Acts as the main backend logic layer.
 # ============================================================
 
+"""LMS Source Signature
+
+__author__     = "Ghani Regina Gold San Luis"
+__group__      = "Group 6"
+__course__     = "CMPE 103 - Object Oriented Programming"
+__school__     = "Polytechnic University of the Philippines"
+__section__    = "BSCPE 2-0"
+__github__     = "https://github.com/goldsanluis/learning-management-system"
+"""
+
+
+
+
+
 from models.course import Course
 from models.student import Student
 from models.instructor import Instructor

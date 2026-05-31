@@ -4,6 +4,19 @@
 # Change colors here and they apply everywhere.
 # ============================================================
 
+"""LMS Source Signature
+
+__author__     = "Ghani Regina Gold San Luis"
+__group__      = "Group 6"
+__course__     = "CMPE 103 - Object Oriented Programming"
+__school__     = "Polytechnic University of the Philippines"
+__section__    = "BSCPE 2-0"
+__github__     = "https://github.com/goldsanluis/learning-management-system"
+"""
+
+
+
+
 # ── Background Colors ──────────────────────────────────────
 BG_DARK       = "#1a1200"   # Very dark brown-black (main window bg)
 BG_MEDIUM     = "#2b1f00"   # Dark brown (panels, frames)
