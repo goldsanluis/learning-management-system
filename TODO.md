@@ -1,4 +1,4 @@
-# TODO
+- [ ] Add Instructor-only "View Enrolled Students" button in gui/enrollment_view.py exactly after the Instructor-role label.
+- [ ] Add EnrollmentView.view_enrolled_students() method with popup UI and list of enrolled students.
+- [ ] Ensure no other changes are made to the file.
 
-- [x] Insert the requested stats bar into `gui/main_window.py` inside `setup_header()` directly after the gold divider line.
-- [ ] Verify the GUI loads without errors and the stats bar displays correctly.

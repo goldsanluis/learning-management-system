@@ -110,9 +110,17 @@ class EnrollmentView:
                       relief="flat", padx=10, pady=7, cursor="hand2",
                       activebackground=GOLD_DARK, activeforeground=TEXT_WHITE,
                       command=self.download_pdf).pack(pady=4, fill="x")
+
+
         else:
             tk.Label(self.frame, text="Select a course to view details.",
                      font=FONT_SMALL, bg=BG_MEDIUM, fg=TEXT_GRAY).pack(pady=4)
+
+            tk.Button(self.frame, text="👥  View Enrolled Students",
+                      font=FONT_BUTTON, bg=BG_LIGHT, fg=GOLD_PALE,
+                      relief="flat", padx=10, pady=7, cursor="hand2",
+                      activebackground=GOLD_DARK, activeforeground=TEXT_WHITE,
+                      command=self.view_enrolled_students).pack(pady=4, fill="x")
 
         # Refresh button
         tk.Button(self.frame, text="🔄  Refresh",
@@ -291,4 +299,52 @@ class EnrollmentView:
                   relief="flat", padx=10, pady=6, cursor="hand2",
                   activebackground=GOLD_BRIGHT,
                   command=popup.destroy).pack(pady=12)
+
+    def view_enrolled_students(self):
+        course = self.get_selected_course()
+        if not course:
+            return
+
+        popup = tk.Toplevel(self.frame)
+        popup.title("Enrolled Students")
+        popup.geometry("420x380")
+        popup.configure(bg=BG_DARK)
+        popup.resizable(False, False)
+        popup.grab_set()
+
+        tk.Frame(popup, bg=GOLD_MEDIUM, pady=10).pack(fill="x")
+        tk.Label(popup, text="👥  Enrolled Students",
+                 font=FONT_HEADER, bg=GOLD_MEDIUM, fg=TEXT_DARK
+                 ).place(relx=0.5, rely=0, anchor="n", y=8)
+        tk.Frame(popup, bg=GOLD_BRIGHT, height=2).pack(fill="x")
+
+        list_frame = tk.Frame(popup, bg=BG_DARK, padx=18, pady=14)
+        list_frame.pack(fill="both", expand=True)
+
+        students_list = tk.Listbox(
+            list_frame, font=("Courier", 10),
+            bg=BG_DARK, fg=SUCCESS,
+            relief="flat", bd=0,
+            selectbackground=GOLD_DARK,
+            selectforeground=TEXT_WHITE
+        )
+        students_list.pack(side="left", fill="both", expand=True)
+
+        scrollbar = tk.Scrollbar(list_frame)
+        scrollbar.pack(side="right", fill="y")
+        students_list.config(yscrollcommand=scrollbar.set)
+        scrollbar.config(command=students_list.yview)
+
+        if not course.students:
+            students_list.insert(tk.END, "  No students enrolled yet.")
+        else:
+            for student in course.students:
+                students_list.insert(tk.END, f"  ✅  {student.name}")
+
+        tk.Button(popup, text="Close",
+                  font=FONT_BUTTON, bg=GOLD_MEDIUM, fg=TEXT_DARK,
+                  relief="flat", padx=10, pady=6, cursor="hand2",
+                  activebackground=GOLD_BRIGHT,
+                  command=popup.destroy).pack(pady=12)
+
 
