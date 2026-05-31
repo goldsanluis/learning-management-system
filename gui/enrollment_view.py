@@ -28,8 +28,27 @@ class EnrollmentView:
         tk.Label(self.frame, text="Available Courses:", font=FONT_BODY,
                  bg=BG_MEDIUM, fg=GOLD_PALE).pack(anchor="w", pady=(0, 4))
 
+        search_frame = tk.Frame(self.frame, bg=BG_MEDIUM)
+        search_frame.pack(fill="x", pady=(0, 6))
+
+        tk.Label(search_frame, text="🔍", font=FONT_BODY,
+                 bg=BG_MEDIUM, fg=GOLD_PALE).pack(side="left")
+
+        self.search_var = tk.StringVar()
+        self.search_var.trace("w", lambda *args: self.filter_courses())
+
+        search_entry = tk.Entry(
+            search_frame, textvariable=self.search_var,
+            font=FONT_BODY, bg=BG_LIGHT, fg=TEXT_WHITE,
+            insertbackground=GOLD_BRIGHT, relief="flat", bd=6,
+            highlightthickness=1, highlightbackground=GOLD_DARK,
+            highlightcolor=GOLD_BRIGHT
+        )
+        search_entry.pack(side="left", fill="x", expand=True, padx=(6, 0))
+
         list_frame = tk.Frame(self.frame, bg=BG_MEDIUM)
         list_frame.pack(fill="both", expand=True)
+
 
         scroll = tk.Scrollbar(list_frame)
         scroll.pack(side="right", fill="y")
@@ -104,10 +123,40 @@ class EnrollmentView:
 
         self.refresh()
 
+    def filter_courses(self):
+        query = self.search_var.get().strip().lower()
+        self.listbox.delete(0, tk.END)
+        self.course_index_map = {}
+        courses = self.service.get_all_courses()
+
+        if not courses:
+            self.listbox.insert(tk.END, "  No courses available yet.")
+            return
+
+        filtered = [c for c in courses if query in c.title.lower()] if query else courses
+
+        if not filtered:
+            self.listbox.insert(tk.END, "  No courses match your search.")
+            return
+
+        idx = 0
+        for course in filtered:
+            for _ in range(6):
+                self.course_index_map[idx] = course
+                idx += 1
+            pdf_status = "Available ✅" if course.pdf_file else "None ❌"
+            self.listbox.insert(tk.END, f"  {'─' * 38}")
+            self.listbox.insert(tk.END, f"  📘 [ID:{course.course_id}]  {course.title}")
+            self.listbox.insert(tk.END, f"  👨‍🏫  {course.instructor.name}")
+            self.listbox.insert(tk.END, f"  📝  {course.description}")
+            self.listbox.insert(tk.END, f"  👥  Enrolled: {len(course.students)} students")
+            self.listbox.insert(tk.END, f"  📄  PDF: {pdf_status}")
+
     def refresh(self):
         self.listbox.delete(0, tk.END)
         self.course_index_map = {}
         courses = self.service.get_all_courses()
+
 
         if not courses:
             self.listbox.insert(tk.END, "  No courses available yet.")
