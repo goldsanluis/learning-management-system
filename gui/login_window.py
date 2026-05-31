@@ -43,6 +43,7 @@ class LoginWindow:
             fg=TEXT_DARK
         ).pack()
 
+
         # ── Gold Divider ───────────────────────────────────
         tk.Frame(self.root, bg=GOLD_BRIGHT, height=2).pack(fill="x")
 

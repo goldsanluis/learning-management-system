@@ -54,25 +54,23 @@ class PDFService:
         return f"PDF downloaded successfully to {destination}!"
 
     def open_pdf(self, course):
-        # Open the PDF directly using the OS default viewer (cross-platform)
         if not course.pdf_file:
             return "No PDF attached to this course!"
         if not os.path.exists(course.pdf_file):
             return "PDF file not found!"
-
-        # Windows
-        if sys.platform.startswith("win"):
+        
+        import subprocess
+        import sys
+        
+        if sys.platform == "win32":
             os.startfile(course.pdf_file)
-            return "Opening PDF..."
-
-        # macOS
-        if sys.platform == "darwin":
+        elif sys.platform == "darwin":
             subprocess.Popen(["open", course.pdf_file])
-            return "Opening PDF..."
-
-        # Linux and other unix-like
-        subprocess.Popen(["xdg-open", course.pdf_file])
+        else:
+            subprocess.Popen(["xdg-open", course.pdf_file])
+        
         return "Opening PDF..."
+
 
 
     def delete_pdf(self, course):
